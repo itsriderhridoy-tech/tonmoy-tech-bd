@@ -1,0 +1,105 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return """
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tonmoy Tech BD</title>
+
+<style>
+body{
+    margin:0;
+    background:#101827;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+}
+
+header{
+    background:#2563eb;
+    padding:20px;
+}
+
+img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    margin-top:30px;
+    border:4px solid white;
+}
+
+h2{
+    color:#00e5ff;
+}
+
+a{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 30px;
+    background:red;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-size:20px;
+}
+
+footer{
+    margin-top:50px;
+    padding:20px;
+    background:#1e293b;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Tonmoy Tech BD</h1>
+</header>
+
+<img src="/static/tonmoy.jpg" alt="Tonmoy Tech BD Logo">
+
+<h2>Android Tips & Tricks</h2>
+
+<p>Welcome to my official website.</p>
+
+<a href="https://www.youtube.com/@mrtonmoyallvideo" target="_blank">
+📺 Visit My YouTube Channel
+</a>
+
+<footer>
+© 2026 Tonmoy Tech BD
+</footer>
+
+</body><h2>🎥 Latest Videos</h2>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
+
+<iframe width="320" height="180"
+src="https://www.youtube.com/embed/VIDEO_ID_1"
+frameborder="0"
+allowfullscreen></iframe>
+
+<iframe width="320" height="180"
+src="https://www.youtube.com/embed/VIDEO_ID_2"
+frameborder="0"
+allowfullscreen></iframe>
+
+<iframe width="320" height="180"
+src="https://www.youtube.com/embed/VIDEO_ID_3"
+frameborder="0"
+allowfullscreen></iframe>
+
+</div>
+
+</body>
+</html>
+"""
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
